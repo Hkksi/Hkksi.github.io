@@ -470,10 +470,11 @@
       }
 
       .profile-photo-box {
-        width: 220px;
-        aspect-ratio: 1 / 1;
+        width: 100%;
+        max-width: 320px;
+        aspect-ratio: 4 / 5;
         margin-bottom: 22px;
-        border-radius: 50%;
+        border-radius: 24px;
         overflow: hidden;
         border: 1px solid var(--border);
         background: var(--surface-2);
@@ -482,9 +483,10 @@
 
       .profile-photo {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         display: block;
+        object-position: center top;
       }
     }
   </style>
