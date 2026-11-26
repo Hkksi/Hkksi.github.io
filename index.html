@@ -500,6 +500,25 @@
         font-size: clamp(2rem, 10vw, 3.2rem);
       }
     }
+  
+    section, [id="resources"] {scroll-margin-top: 105px}
+    .hero {padding: 40px 0 12px}
+    .hero-card {display:grid;grid-template-columns:minmax(120px,180px) 1fr;align-items:center;gap:clamp(24px,5vw,72px)}
+    .profile-photo-box {margin:0}
+    .kicker {color:var(--primary);font-size:.88rem;font-weight:700}
+    h1 {margin:12px 0 20px}
+    h1 small {font-size:.45em;display:inline-block;color:var(--muted);letter-spacing:0}
+    .hero-lead,.project-card p,.project-card dd,.project-card figcaption {word-break:keep-all;overflow-wrap:break-word}
+    .featured {display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:32px;margin-bottom:18px;padding:clamp(20px,3vw,36px)}
+    .featured h3 {font-size:2.4rem;letter-spacing:-.05em}
+    .featured .standfirst {color:var(--text);font-weight:650;margin-bottom:18px}
+    .featured dl {display:grid;grid-template-columns:4em 1fr;gap:12px;margin-bottom:18px}
+    .featured dt {font-weight:700;color:var(--primary)}
+    .featured dd {margin:0}.featured figure {margin:0}.featured img {border:1px solid var(--border);border-radius:10px;width:100%}
+    .featured figcaption {margin-top:10px;font-size:.88rem;color:var(--muted)}
+    .featured figcaption strong {display:block;color:var(--text)}
+    .projects h3 {font-size:1.45rem}.projects .text-link {margin-top:auto}
+    @media(max-width:720px){.hero-card,.featured {grid-template-columns:1fr}.profile-photo-box{max-width:100px}.nav{gap:4px}.hero-actions{margin-top:12px}.hero{padding-top:20px}section{scroll-margin-top:145px}}
   </style>
 </head>
 <body>
@@ -514,11 +533,11 @@
 
       <nav aria-label="주요 메뉴">
         <ul>
-          <li><a href="#about">Overview</a></li>
-          <li><a href="#career">Carrer</a></li>
-          <li><a href="#projects">Activities</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#projects">프로젝트</a></li>
+          <li><a href="#about">보안 활동</a></li>
+          <li><a href="#career">이력</a></li>
+          <li><a href="#certifications">자격</a></li>
+          <li><a href="#contact">연락처</a></li>
           <li>
             <button
               class="theme-toggle"
@@ -538,93 +557,37 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <article class="hero-card">
-          <div class="eyebrow">Hkksi | Personal Portfolio(Still under updating!)</div>
-
-          <div class="profile-photo-box">
-            <img
-              src="./images/profile.jpg"
-              alt="profile Photo"
-              class="profile-photo"
-            />
-          </div>
-
-          <h1>
-            홍석현<br />
-            SeokHyun Hong
-          </h1>
-
-          <p class="hero-lead">
-            Computer Science & Engineering, Chung-Ang Univ.<br />
-            Interested in Cyber Security.<br />
-            보안 기준을 점검 가능한 통제로 옮기는 GapZer0의 PM을 맡았습니다. 대학 연합 Uni-D에서는 해커톤과 데이터톤 두 트랙의 운영을 총괄했습니다.
-          </p>
-
-          <div class="quick-info">
-            <span class="quick-chip">Hkksi</span>
-            <span class="quick-chip">Born in 2003</span>
-            <span class="quick-chip">Chung-Ang Univ.</span>
-            <span class="quick-chip">Computer Science & Engineering</span>
-            <span class="quick-chip">Cyber Security</span>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">See Activities</a>
-            <a class="btn btn-secondary" href="https://github.com/Hkksi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <div class="profile-photo-box"><img src="images/profile.jpg" alt="홍석현" class="profile-photo" /></div>
+          <div class="hero-copy">
+            <p class="kicker">중앙대학교 소프트웨어학부 · 보안 / 소프트웨어</p>
+            <h1>홍석현 <small>SeokHyun Hong</small></h1>
+            <p class="hero-lead">보안 기준을 실제 시스템에서 어떻게 점검할 수 있을지 연구합니다. WhiteHat School에서는 보안 통제 관리 프로젝트를 이끌었고, 대학 연합 Uni-D에서는 해커톤과 데이터톤을 함께 운영했습니다.</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="#projects">대표 프로젝트</a><a class="btn btn-secondary" href="portfolio.html">발표 자료 보기 →</a></div>
           </div>
         </article>
-
-        <aside class="hero-side" aria-label="핵심 요약">
-          <div class="mini-card">
-            <h2>About me</h2>
-            <p>
-              중앙대학교 소프트웨어학부에서 공부하며 보안 연구, 모바일 앱 개발, 학생 자치 프로젝트에 참여했습니다.
-            </p>
-          </div>
-        </aside>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-heading">
-          <div class="left">
-            <h2 class="section-title">Overview</h2>
-            <p>Software engineering, security research and student leadership.</p>
-          </div>
-        </div>
-
-        <div class="grid-3">
-          <article class="panel">
-            <h3>Major</h3>
-            <p>
-              Computer Science & Engineering, Chung-Ang Univ.<br />
-              자료구조와 운영체제에서 모바일 앱 개발, 캡스톤디자인, 보안프로젝트설계로 공부를 이어왔습니다.
-            </p>
-          </article>
-
-          <article class="panel">
-            <h3>Interest</h3>
-            <p>
-              기술 점검 결과를 보안 요구사항과 연결하는 일에 관심이 있습니다. CAUtion과 WhiteHat School에서 분석 보고서, 교육용 문제, 보안 통제 카탈로그를 만들었습니다.
-            </p>
-          </article>
-
-          <article class="panel">
-            <h3>Goal</h3>
-            <p>
-              팀원이 같은 기준으로 결과를 확인하고 다음 조치를 결정할 수 있는 보안 도구와 운영 절차를 만들고 싶습니다.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <section id="projects"><div class="container"><div class="section-heading"><h2 class="section-title">대표 프로젝트</h2></div><article class="project-card featured"><div><div class="kicker">WhiteHat School 4기 · 프로젝트 PM</div>
+<h3>GapZer0</h3><p class="standfirst">보안 요구사항을 점검과 개선 조치까지 연결하는 통제 관리 시스템</p>
+<dl><dt>문제</dt><dd>국제 보안 프레임워크와 국내 인증 기준은 항목을 나누는 단위가 달라, 어떤 증적으로 요구사항을 충족했는지 추적하기 어려웠습니다.</dd>
+<dt>내 역할</dt><dd>PM으로 일정과 검토 기준을 조율하고, 프레임워크와 GRC 카탈로그를 정리했습니다. 팀은 같은 통제 ID로 이행 절차와 점검 결과를 연결했습니다.</dd>
+<dt>팀 성과</dt><dd>15개 도메인의 통제 121개를 정리했습니다. 연구 결과로 CISC-W 2026 논문 채택과 한국융합보안학회 추계학술대회 우수논문상을 받았습니다.</dd></dl>
+<a class="text-link" href="portfolio.html#slide-2">설계와 검증 과정 →</a></div>
+<figure><a href="images/grc-check.png" aria-label="GRC 점검 화면 원본 보기"><img loading="lazy" src="images/grc-check.png" alt="가상기업에서 전송 암호 설정을 점검한 GRC 화면" /></a>
+<figcaption><strong>INF-E-01 · 전송 암호 설정 점검</strong>담당자가 실패 항목의 통제 ID로 조치 방법을 찾는 화면입니다. 가상기업에 배정한 운영 통제 203건 중 통과 161건, 실패 33건, 미시험 9건이었습니다.</figcaption></figure></article><div class="projects"><article class="project-card"><div class="kicker">캡스톤디자인 · 3인 팀</div><h3>Perbrew</h3>
+            <p>커피 입문자의 취향을 추출 레시피에 반영하기 위해 설문을 설계하고 K-means로 응답을 군집화했습니다. 레시피 생성·수정 스크립트를 맡았습니다.</p><p>팀은 앱·서버·머신을 연결해 맛에 대한 피드백으로 다음 레시피를 바꾸고 추출 농도를 기록했습니다.</p><a class="text-link" href="https://github.com/2025-2-CAU-Capstone-Design/PerBrew_FastAPI_Server">서버 저장소 →</a></article><article class="project-card"><div class="kicker">모바일앱개발 · Android 담당</div><h3>ClosetCast</h3>
+            <p>날씨에 맞으면서 실제로 가진 옷을 추천하는 앱입니다. Figma로 화면 흐름을 설계하고 Kotlin 프런트엔드를 전담했습니다.</p><p>기상청 API와 서버를 앱에 연결하고 테스트 피드백을 반영해 옷장 데이터와 날씨를 함께 사용하는 추천 화면을 완성했습니다.</p><a class="text-link" href="https://github.com/WY-C/ClosetCast">앱 저장소 →</a></article></div></div></section>
+<section id="about"><div class="container"><div class="section-heading"><h2 class="section-title">보안 활동과 교육</h2></div><div class="projects"><article class="project-card"><div class="kicker">보안 동아리 · 2022년 1기</div><h3>CAUtion</h3>
+            <p>시스템 해킹과 기초 암호학 스터디를 거쳐 All in Kali Linux에서 MITRE ATT&amp;CK 기준으로 분석한 실습 보고서를 제출했습니다.</p><p>2026년 CTF Lab에서는 객체 단위 접근권한 검사를 주제로 교육용 문제와 풀이를 정리했습니다.</p><a class="text-link" href="https://github.com/CAU-tion/ALL-in-Kali-Linux/commit/08ee0cf50ebe9f39e45c334ef1e5c68f35c9a11e">개인 보고서 제출 기록 →</a></article><article class="project-card"><div class="kicker">보안 교육 · 2025–2026</div><h3>WhiteHat School · 직무 탐색</h3>
+            <p>WhiteHat School 4기에서 패킷 처리와 시큐어코딩 과제를 구현하고 메모리 분석, 침해사고 대응, 보안 정책을 공부했습니다.</p><p>Skills2Work Seoul에서 데이터센터와 보안을 배웠고, HSPACE Knights Frontier 1기에서 CodeQL과 BAS·Elastic SIEM 사례를 조사했습니다.</p><a class="text-link" href="https://github.com/Hkksi/whs-pcap-programming">패킷 프로그래밍 과제 →</a></article></div></div></section>
 
     <section id="career">
       <div class="container">
         <div class="section-heading">
           <div class="left">
-            <h2 class="section-title">Career</h2>
-            <p>Education and leadership roles.</p>
+            <h2 class="section-title">학력과 활동 이력</h2>
+            <p>학력과 학생 자치, 병역 이력</p>
           </div>
         </div>
 
@@ -640,7 +603,7 @@
 
           <article class="timeline-item">
             <div class="timeline-meta">Student Council</div>
-            <strong>Devoted as Student Council Member</strong>
+            <strong>소프트웨어학부 학생회</strong>
             <p>
               소프트웨어학부 제51대 학생회 문화부장(2022.12 ~ 2023.11)<br />
               소프트웨어학부 제54대 부학생회장(2025.12 ~)<br />문화부장으로 행사별 기획·결산과 차기 기수 인수인계를 정리했고, 부학생회장으로 학부 사업과 학생총회 운영에 참여했습니다.
@@ -653,17 +616,16 @@
             <p>
               2026.01 ~ 2026.12(Intended)<br />
               Uni-D 6기 회장, 총괄팀장 및 예산팀원<br /> 
-              제6회 Uni-DTHON에서 8개 대학 참가자 132명이 참여한 해커톤·데이터톤 운영을 총괄했습니다.
+              제6회 Uni-DTHON에서 8개 대학 참가자 132명의 해커톤·데이터톤 운영을 총괄했습니다. 해커톤 15팀이 결과물을 제출하고 데이터톤 17팀이 최종 심사에 참여했습니다. <a class="text-link" href="portfolio.html#slide-4">트랙별 운영 결과 →</a>
             </p>
           </article>
           
           <article class="timeline-item">
             <div class="timeline-meta">Military</div>
-            <strong>KOREA ARMY Reserved</strong>
+            <strong>대한민국 육군 · KATUSA</strong>
             <p>
               2023.12.26 ~ 2025.06.25<br />
-              대한민국 육군 병장 만기 전역<br />
-              Served as KATUSA
+              병장 만기 전역
             </p>
           </article>
 
@@ -671,178 +633,13 @@
       </div>
     </section>
 
-    <section id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <div class="left">
-            <h2 class="section-title">Activities</h2>
-            <p>Selected projects, individual contributions and team results.</p>
-          </div>
-        </div>
-
-        <div class="projects">
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>GapZer0</h3>
-                <p>팀에서 NIST CSF 2.0과 ISMS-P 요구사항을 비교해 15개 도메인, 121개 보안 통제를 정리했습니다. PM으로 일정과 의사결정을 관리하고 프레임워크, GRC 카탈로그와 발표 자료를 취합했습니다.<br />가상기업에 배정한 운영 통제 203건의 점검 결과는 통과 161건, 실패 33건, 미시험 9건이었습니다. 팀 연구로 CISC-W 2026 논문 채택과 한국융합보안학회 추계학술대회 우수논문상을 받았습니다.</p>
-              </div>
-              <span class="project-tag">WhiteHat School 4기 · PM</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">GRC</span>
-              <span class="chip">NIST CSF 2.0</span>
-              <span class="chip">ISMS-P</span>
-              <a class="chip" href="portfolio.html#slide-3">점검 결과 보기 ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>Uni-DTHON</h3>
-                <p>8개 대학이 참여한 제6회 Uni-DTHON(2026.11.14–15)의 대표학생으로 해커톤과 데이터톤 운영을 총괄했습니다.<br />해커톤은 대학 간 혼합팀을 구성해 시연과 소스 코드를 평가했고, 데이터톤은 공통 GPU 환경과 리더보드로 모델을 검증했습니다. 참가자 132명 중 해커톤 15팀이 결과물을 제출하고 데이터톤 17팀이 최종 심사에 참여했습니다.</p>
-              </div>
-              <span class="project-tag">Uni-D 6기 회장</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">대학 연합</span>
-              <span class="chip">행사 총괄</span>
-              <span class="chip">결과 검증</span>
-              <a class="chip" href="portfolio.html#slide-4">트랙별 운영 결과 ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>Perbrew</h3>
-                <p>커피 입문자가 맛에 대한 피드백만으로 레시피를 바꿀 수 있도록 3인 팀에서 사용자 설문과 추천 로직을 맡았습니다.<br />설문 응답을 K-means로 군집화하고 OpenAI Assistant API로 레시피 생성·수정 스크립트를 구현했습니다. 팀은 머신·서버·앱을 연결해 맛 평가와 추출 농도(TDS)를 함께 기록했습니다.</p>
-              </div>
-              <span class="project-tag">Capstone Design</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">K-means</span>
-              <span class="chip">FastAPI</span>
-              <span class="chip">사용자 연구</span>
-              <a class="chip" href="https://github.com/2025-2-CAU-Capstone-Design/PerBrew_FastAPI_Server">서버 저장소 ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>ClosetCast</h3>
-                <p>추천받은 옷을 실제로 입을 수 있도록 날씨와 사용자의 옷장을 함께 고려한 3인 팀 프로젝트입니다.<br />Figma로 화면 흐름을 설계하고 Android 프런트엔드를 전담했습니다. Kotlin 앱에 기상청 API와 서버 API를 연결하고 테스트 피드백을 반영했습니다.</p>
-              </div>
-              <span class="project-tag">Mobile App</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">Android</span>
-              <span class="chip">Kotlin</span>
-              <span class="chip">Figma</span>
-              <a class="chip" href="https://github.com/WY-C/ClosetCast">프로젝트 저장소 ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>WhiteHat School 4기</h3>
-                <p>패킷 프로그래밍과 시큐어코딩 과제를 구현하고 코드를 개인 저장소에 기록했습니다.<br />메모리 분석, 침해사고 대응, DevSecOps와 정보보안 정책을 공부한 뒤 GapZer0에서 통제 기준과 기술 검증을 연결하는 일을 맡았습니다.</p>
-              </div>
-              <span class="project-tag">Security Training</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">네트워크 분석</span>
-              <span class="chip">시큐어코딩</span>
-              <span class="chip">보안 정책</span>
-              <a class="chip" href="https://github.com/Hkksi/whs-pcap-programming">패킷 프로그래밍 과제 ↗</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>CAUtion</h3>
-                <p>
-                  중앙대학교 소프트웨어학부 보안 동아리<br />
-                  2022년 1기로 참여해 시스템 해킹과 기초 암호학을 공부하고, 팀 보고서 작성과 교육용 CTF 문제 제작으로 활동을 넓혔습니다.
-                </p>
-              </div>
-              <span class="project-tag">Security Club</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">Welcome Study</span>
-              <span class="chip">System Hacking</span>
-              <span class="chip">Basic Cryptology</span>
-              <span class="chip">All in Kali Linux</span>
-              <span class="chip">CTF Lab</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>All in Kali Linux / CTF Lab</h3>
-                <p>
-                  CAUtion에서 진행한 프로젝트형 스터디<br />
-                  4인 팀 실습에서 MITRE ATT&amp;CK 기준으로 분석한 <a href="https://github.com/CAU-tion/ALL-in-Kali-Linux/commit/08ee0cf50ebe9f39e45c334ef1e5c68f35c9a11e">개인 보고서</a>를 제출했습니다. 2026년 CTF Lab에서는 객체 단위 접근권한 검사를 주제로 문제와 해설을 정리했습니다.
-                </p>
-              </div>
-              <span class="project-tag">Projective Study</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">Kali Linux</span>
-              <span class="chip">CTF</span>
-              <span class="chip">Cyber Security</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>Skills2Work Seoul</h3>
-                <p>
-                  아시아재단 주관, Microsoft 후원, KITRI 협력 프로그램에 참여해
-                  데이터센터 지식과 사이버 보안 역량 강화를 경험.
-                </p>
-              </div>
-              <span class="project-tag">Program</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">Data Center</span>
-              <span class="chip">Cyber Security</span>
-              <span class="chip">Seoul</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3>Knights Frontier 1기</h3>
-                <p>
-                  HSPACE 주관 직무 탐색 프로그램에 참여하며
-                  CodeQL 원리, PAC 보호기법, BAS와 Elastic SIEM을 활용한 보안 검증 사례를 공부했습니다.
-                </p>
-              </div>
-              <span class="project-tag">Career Program</span>
-            </div>
-            <div class="chip-wrap">
-              <span class="chip">HSPACE</span>
-              <span class="chip">Career Exploration</span>
-              <span class="chip">Skills & Tools</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    
 
     <section id="certifications">
       <div class="container">
         <div class="section-heading">
           <div class="left">
-            <h2 class="section-title">Certifications</h2>
-            <p>List the Certifications what i got so far.</p>
+            <h2 class="section-title">자격</h2>
           </div>
         </div>
 
@@ -850,125 +647,32 @@
           <article class="cert-card">
             <h3>대한상공회의소 한자 4급</h3>
             <p>
-              - 자격번호: 23-V9-003270 <br />
-              - 발급번호: 67-005564<br />
-              - 합격일자: 2023.07.28
+              취득 · 2023.07.28
             </p>
           </article>
 
           <article class="cert-card">
             <h3>리눅스마스터 2급</h3>
             <p>
-              - 자격번호: LMS-2501-004198<br />
-              - 합격일자: 2025.03.28
+              취득 · 2025.03.28
             </p>
           </article>
 
           <article class="cert-card">
             <h3>네트워크 관리사 2급</h3>
             <p>
-              - 자격번호: NT2077368<br />
-              - 합격일자: 2025.04.08
+              취득 · 2025.04.08
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="section-heading">
-          <div class="left">
-            <h2 class="section-title">Contact & URLs</h2>
-            <p>Contact Email and URLs About me. Feel free to contact me.</p>
-          </div>
-        </div>
+    <section id="contact"><div class="container"><div class="section-heading"><h2 class="section-title">연락처와 채널</h2></div><div class="projects">
+<article class="contact-card"><h3>이메일</h3><a class="text-link" href="mailto:ghdtjrgus239@cau.ac.kr">ghdtjrgus239@cau.ac.kr</a></article>
+<article class="contact-card"><h3>온라인 프로필</h3><div class="project-links"><a class="text-link" href="https://github.com/Hkksi">GitHub</a><a class="text-link" href="https://linkedin.com/in/hkksi">LinkedIn</a><a class="text-link" href="https://cliff-hole-95b.notion.site/hkksi-security">기술 블로그</a><a class="text-link" href="https://www.acmicpc.net/user/ghdtjrgus239">백준</a><a class="text-link" href="https://www.instagram.com/polariix">Instagram</a></div></article></div></div></section>
 
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h3>Email</h3>
-            <p>
-              <a href="mailto:ghdtjrgus239@cau.ac.kr">
-                ghdtjrgus239@cau.ac.kr
-              </a>
-            </p>
-          </article>
-
-          <article class="contact-card">
-            <h3>GitHub</h3>
-            <p>
-              <a href="https://github.com/Hkksi" target="_blank" rel="noopener noreferrer">
-                github.com/Hkksi
-              </a>
-            </p>
-          </article>
-
-          <article class="contact-card">
-            <h3>Baekjoon</h3>
-            <p>
-              <a href="https://www.acmicpc.net/user/ghdtjrgus239" target="_blank" rel="noopener noreferrer">
-                acmicpc.net/user/ghdtjrgus239
-              </a>
-            </p>
-          </article>
-
-          <article class="contact-card">
-            <h3>Tech Blog</h3>
-            <p>
-              <a href="https://cliff-hole-95b.notion.site/hkksi-security?source=copy_link" target="_blank" rel="noopener noreferrer">
-                hkksi.notion.site/hkksi-security
-              </a>
-            </p>
-          </article>
-
-          <article class="contact-card">
-            <h3>Instagram</h3>
-            <p>
-              <a href="https://www.instagram.com/polariix" target="_blank" rel="noopener noreferrer">
-               @polariix
-              </a>
-            </p>
-          </article>
-
-          <article class="contact-card">
-            <h3>Portfolio</h3>
-            <p>
-              <a href="portfolio.html" target="_blank" rel="noopener noreferrer">
-                프로젝트 발표 슬라이드
-              </a>
-            </p>
-          </article>
-          
-          <article class="contact-card">
-            <h3>LinkedIn</h3>
-            <p>
-              <a href="http://linkedin.com/in/hkksi" target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/hkksi
-              </a>
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="resources">
-      <div class="container">
-        <div class="section-heading">
-          <div class="left">
-            <h2 class="section-title">Resources</h2>
-            <p>The appendix files.</p>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>Appendix</h3>
-          <p>
-            <a href="portfolio.html">발표용 포트폴리오 · 10장 슬라이드 ↗</a><br />
-            2026년 11월 26일 기준 GitHub 공개 기여 달력은 2022년 2회, 2023·2024년 각 0회, 2025년 11회, 2026년 33회입니다. <a href="https://github.com/Hkksi">GitHub 기여 기록 ↗</a>
-          </p>
-        </div>
-      </div>
-    </section>
+    <div id="resources" class="container"><a class="text-link" href="portfolio.html#slide-10">GitHub 기여 기록과 발표 자료 →</a></div>
   </main>
 
   <footer>
