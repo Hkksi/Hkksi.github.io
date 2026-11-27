@@ -44,3 +44,7 @@ footer{padding:24px 0;border-top:1px solid hsl(var(--border));color:hsl(var(--mu
 @media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.project-grid .card:first-child{grid-column:1/-1}.top{gap:16px}.links{gap:12px}}
 @media(max-width:650px){header{padding-block:12px;gap:10px}.top{display:contents}.links{width:100%;order:3;overflow:auto;justify-content:space-between}.hero{min-height:560px}.band{padding:22px 14px;margin:24px 0 36px}.grid{grid-template-columns:1fr}.visual{height:150px}.card{padding:18px}.actions{gap:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.brand-preview.perbrew, .brand-preview.perbrew img {background:#fbf8f4}
+.brand-preview.closetcast {background:#fff1f1}
+.brand-preview.closetcast img {width:auto;height:76%;border-radius:18%;background:transparent}
